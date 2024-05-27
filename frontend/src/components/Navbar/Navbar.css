@@ -1,0 +1,88 @@
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(246, 233, 233);
+}
+.navbar .navbar-menu {
+  display: flex;
+  list-style: none;
+  color: red;
+  font-size: 18px;
+  gap: 30px;
+  align-items: center;
+}
+.navbar .logo {
+  width: 150px;
+}
+.navbar_icon {
+  display: flex;
+  color: red;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #02e15b;
+}
+.navbar li {
+  cursor: pointer;
+}
+.navbar_icon {
+  position: relative;
+}
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  font-size: 24px;
+}
+
+.cart-dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 1px solid white; /* Optional: add border to make it more visible */
+}
+.navbar-profile {
+  position: relative;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+}
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff2ef;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  outline: 2px solid white;
+  list-style: none;
+}
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+.nav-profile-dropdown li:hover {
+  color: tomato;
+}

@@ -1,0 +1,64 @@
+.header {
+  height: 36vw;
+  margin: 30px auto;
+  background: url("grap.jpg") no-repeat;
+  background-size: contain;
+  position: relative;
+  padding: 150px;
+  margin-left: 300px;
+  border-radius: 50px solid #f80808;
+  border-bottom: #4de510;
+}
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 10%;
+  left: 6vw;
+  max-width: 50%;
+  align-items: start;
+  gap: 1.5vw;
+  animation: fadeIn 3s;
+}
+.header-contents h2 {
+  font-weight: 700;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  padding-left: 9%;
+  margin-top: 100px;
+}
+.header-contents p {
+  height: 200px;
+  font-weight: 500;
+  color: rgb(241, 240, 248);
+  padding-top: 30px;
+  font-size: 20px;
+  animation: fadeIn 3s;
+}
+.header-contents button {
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  font-size: max(1vw, 13px);
+  padding: 10px;
+  background-color: rgb(236, 249, 229);
+}
+@media (max-width: 1050px) {
+  .header {
+    height: 38vw;
+  }
+  .header-contents {
+    max-width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 55%;
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 2vw 4vw;
+  }
+}
