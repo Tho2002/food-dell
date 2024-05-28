@@ -5,6 +5,7 @@
   align-items: center;
   background-color: rgb(246, 233, 233);
 }
+
 .navbar .navbar-menu {
   display: flex;
   list-style: none;
@@ -13,6 +14,7 @@
   gap: 30px;
   align-items: center;
 }
+
 .navbar .logo {
   width: 150px;
 }

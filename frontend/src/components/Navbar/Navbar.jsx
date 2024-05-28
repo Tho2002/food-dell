@@ -37,7 +37,7 @@ const Navbar = ({ setShowLogin }) => {
                     <div className='navbar-profile'>
                         <i class="fa-solid fa-user">User</i>
                         <ul className='nav-profile-dropdown'>
-                            <li><i class="fa-solid fa-cart-plus"></i>Order</li>
+                            <li onClick={() => navigate("/myorders")}><i class="fa-solid fa-cart-plus"></i>Order</li>
                             <hr />
                             <li onClick={logout}><i class="fa-solid fa-right-from-bracket"></i>Logout</li>
                         </ul>

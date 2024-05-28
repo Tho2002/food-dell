@@ -5,6 +5,10 @@
   box-shadow: 0 0 10px #00000015;
   transition: 0.3s;
 }
+.food-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 .food-item-image {
   width: 100%;
   border-radius: 15px 15px 0px 0px;

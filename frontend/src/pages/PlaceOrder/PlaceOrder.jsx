@@ -1,7 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { StoreContext } from '../../context/StroreContext'
 import "./PlaceOrder.css"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function PlaceOrder() {
@@ -48,8 +49,8 @@ export default function PlaceOrder() {
             let response = await axios.post(`${url}/api/order/place`, orderData, { headers: { token } })
             if (response.data.success) {
 
-
-                window.location.replace(response)
+                const { session_url } = response.data
+                window.location.replace(session_url)
             } else {
                 alert("Error: " + response.data.message || "Unable to place order")
             }
@@ -58,7 +59,15 @@ export default function PlaceOrder() {
             alert("Error placing order: " + error.message)
         }
     }
+    const navigate = useNavigate()
+    useEffect(() => {
 
+        if (!token) {
+            navigate("/cart")
+        } else if (getTotalCartAmount() === 0) {
+            navigate("/cart")
+        }
+    }, [token]);
     return (
         <form onSubmit={PlaceOrder} className="place-order">
             <div className="place-order-left">

@@ -21,7 +21,7 @@ import ggplay from "../assets/ggplay.jpg";
 import appstore1 from "../assets/appstore1.jpg";
 import cross from "../assets/cross.jpg";
 import grap from "../assets/grap.jpg";
-
+import box from "../assets/box.jpg";
 // Export assets
 export const assets = {
   logo,
@@ -37,6 +37,7 @@ export const assets = {
   appstore1,
   cross,
   grap,
+  box,
 };
 export const menu_list = [
   {
